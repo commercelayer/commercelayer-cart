@@ -32,8 +32,9 @@ function CartPage(): JSX.Element {
             <Skeleton />
           ) : !settings.isValid ? (
             <SettingsError
-              retryable={settings.retryable}
               isEmbedded={isEmbedded()}
+              retryable={settings.retryable}
+              redirectTo={settings.redirectTo}
             />
           ) : (
             <>
